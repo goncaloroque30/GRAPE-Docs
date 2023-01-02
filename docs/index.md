@@ -15,7 +15,7 @@
 - Graphical user interface (GUI) to edit all the input data, run calculations and visualize outputs.
 - Models based implementation, meaning as little hard coded variables as possible.
 - [SQLite](https://sqlite.org/) as an application file format (.grp). All user inputs can be automated by creating this file and inserting values into it. Further information can be found in the [schema documentation](Schema.md).
-- GRAPE.exe can be called from a command line with arguments to automate certain actions. Check the [user guide](userguide/Gui&CommandLineTool.md) or run `GRAPE.exe -h` from the command line for further information.
+- GRAPE.exe can be called from a command line with arguments to automate certain actions. Check the [user guide](Gui&CommandLineTool.md) or run `GRAPE.exe -h` from the command line for further information.
 - Supported models:
     - Performance:
         - Model specified in the [Doc29](https://ecac-ceac.org/documents/ecac-documents-and-international-agreements)

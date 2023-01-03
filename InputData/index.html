@@ -145,10 +145,16 @@
       </label>
       <nav class="md-search__options" aria-label="Search">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -174,6 +180,69 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../UserGuide/" class="md-tabs__link md-tabs__link--active">
+        User Guide
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../Schema/" class="md-tabs__link">
+      Schema
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../About/" class="md-tabs__link">
+      About
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -186,8 +255,10 @@
                   <div class="md-sidebar__inner">
                     
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="GRAPE" class="md-nav__button md-logo" aria-label="GRAPE" data-md-component="logo">
       
@@ -230,6 +301,18 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
       
       
         <label class="md-nav__link" for="__nav_2">
@@ -278,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../userguide/Datasets/" class="md-nav__link">
+      <a href="../Datasets/" class="md-nav__link">
         Datasets
       </a>
     </li>
@@ -312,7 +395,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -321,7 +406,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -344,26 +429,6 @@
   <a href="#flights" class="md-nav__link">
     Flights
   </a>
-  
-    <nav class="md-nav" aria-label="Flights">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#points" class="md-nav__link">
-    Points
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#procedural" class="md-nav__link">
-    Procedural
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -405,33 +470,6 @@
   <a href="#routes" class="md-nav__link">
     Routes
   </a>
-  
-    <nav class="md-nav" aria-label="Routes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simple" class="md-nav__link">
-    Simple
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vector" class="md-nav__link">
-    Vector
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rnp" class="md-nav__link">
-    RNP
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -519,7 +557,9 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
   
@@ -528,7 +568,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -551,26 +591,6 @@
   <a href="#flights" class="md-nav__link">
     Flights
   </a>
-  
-    <nav class="md-nav" aria-label="Flights">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#points" class="md-nav__link">
-    Points
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#procedural" class="md-nav__link">
-    Procedural
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -613,33 +633,6 @@
     Routes
   </a>
   
-    <nav class="md-nav" aria-label="Routes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simple" class="md-nav__link">
-    Simple
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#vector" class="md-nav__link">
-    Vector
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rnp" class="md-nav__link">
-    RNP
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
         
       </ul>
@@ -671,7 +664,7 @@
 
 <h1 id="input-data">Input Data</h1>
 <h2 id="fleet">Fleet</h2>
-<p>An entry in the GRAPE fleet can be viewed as an abstract concept uniquely identified by the fleet ID. It can represent any given number of physical airplanes being considered in the study. Generally, the level of detail of a study decreases with increasing number of physical airplanes represented by a single ID. The fleet is used to merge the different groupings in the <a href="./Datasets.md">datasets</a> used by GRAPE into a single ID which can then be attributed to an operation. The following variables can be defined for each fleet ID:</p>
+<p>An entry in the GRAPE fleet can be viewed as an abstract concept uniquely identified by the fleet ID. It can represent any given number of physical airplanes being considered in the study. Generally, the level of detail of a study decreases with increasing number of physical airplanes represented by a single ID. The fleet is used to merge the different groupings in the <a href="../Datasets/">datasets</a> used by GRAPE into a single ID which can then be attributed to an operation. The following variables can be defined for each fleet ID:</p>
 <ul>
 <li>number of engines</li>
 <li>maximum sea level static thrust</li>
@@ -682,7 +675,7 @@
 <li>Doc29 noise arrival delta</li>
 <li>Doc29 noise departure delta</li>
 </ul>
-<p>The number of engines and the maximum sea level static thrust are used by the Doc29 performance model and the SFI fuel flow model. The following four IDs associate the fleet ID with the different <a href="./Datasets.md">datasets</a> used. The noise deltas are used by the Doc29 noise model to apply deviations to the standard data found in the database.</p>
+<p>The number of engines and the maximum sea level static thrust are used by the Doc29 performance model and the SFI fuel flow model. The following four IDs associate the fleet ID with the different <a href="../Datasets/">datasets</a> used. The noise deltas are used by the Doc29 noise model to apply deviations to the standard data found in the database.</p>
 <hr />
 <h2 id="operations">Operations</h2>
 <p>There are two main ways to describe an operation in GRAPE:</p>
@@ -704,7 +697,7 @@
 <li><a href="#points">points</a></li>
 <li><a href="#procedural">procedural</a></li>
 </ul>
-<p>Further information of how this data is structured can be found in the <a href="./Datasets.md#performance">Doc29 performance dataset</a> section.</p>
+<p>Further information of how this data is structured can be found in the <a href="../Datasets/#performance">Doc29 performance dataset</a> section.</p>
 <h4 id="points">Points</h4>
 <p>A points profile defines a sequence of altitudes AFE, true airspeeds and thrust along the ground track (the cumulative ground distance). These values are not influenced by any other variable, such as the operation weight, thrust reduction or atmospheric conditions.</p>
 <h4 id="procedural">Procedural</h4>
@@ -761,6 +754,11 @@
           
         </div>
         
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
       </main>
       
         <footer class="md-footer">
@@ -769,7 +767,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../userguide/Datasets/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Datasets" rel="prev">
+        <a href="../Datasets/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Datasets" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -826,7 +824,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>

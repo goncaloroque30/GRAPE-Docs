@@ -8,7 +8,7 @@ A study in GRAPE can be defined as a collection of the input data and its associ
 
 # Sections
 
-- [GUI & Command Line Tool](Gui&CommandLineTool.md): guidance on how to interact with the application
+- [Application](Application.md): guidance on how to interact with the application
 - [Datasets](Datasets.md): how different known databases are structured  and implemented
 - [Input Data](InputData.md): describes the necessary data to define a scenario and where it is used in the calculations
 - [Runs & Outputs](Runs&Outputs.md): explains the types of models that can be applied to the input data, what settings can be tweaked and the outputs produced

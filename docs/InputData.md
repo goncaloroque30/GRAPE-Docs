@@ -1,22 +1,5 @@
 # Input Data
 
-## Fleet
-
-An entry in the GRAPE fleet can be viewed as an abstract concept uniquely identified by the fleet ID. It can represent any given number of physical airplanes being considered in the study. Generally, the level of detail of a study decreases with increasing number of physical airplanes represented by a single ID. The fleet is used to merge the different groupings in the [datasets](./Datasets.md) used by GRAPE into a single ID which can then be attributed to an operation. The following variables can be defined for each fleet ID:
-
-- number of engines
-- maximum sea level static thrust
-- Doc29 performance ID
-- SFI ID
-- LTO ID
-- Doc29 noise ID
-- Doc29 noise arrival delta
-- Doc29 noise departure delta
-
-The number of engines and the maximum sea level static thrust are used by the Doc29 performance model and the SFI fuel flow model. The following four IDs associate the fleet ID with the different [datasets](./Datasets.md) used. The noise deltas are used by the Doc29 noise model to apply deviations to the standard data found in the database.
-
----
-
 ## Operations
 
 There are two main ways to describe an operation in GRAPE:
@@ -41,7 +24,7 @@ A flight is the type of operation for which the least amount of known data is ne
 - [points](#points)
 - [procedural](#procedural)
 
-Further information of how this data is structured can be found in the [Doc29 performance dataset](./Datasets.md#performance) section.
+More detailed information of how this data is structured can be found in the [Doc29 performance dataset](./Datasets.md#performance) section.
 
 #### Points
 
@@ -49,7 +32,7 @@ A points profile defines a sequence of altitudes AFE, true airspeeds and thrust 
 
 #### Procedural
 
-The vertical profile of the operation is obtained by applying the Doc29 performance model to the sequence of steps defined in the selected profile. Additionally to the profile definition itself, the atmospheric conditions, operation weight and in the case of departure operations the amount of thrust reduction influence the vertical profile of the operation.
+The vertical profile of the operation is obtained by applying the Doc29 performance model to the sequence of steps defined in the selected profile. Additionally to the profile definition itself, the atmospheric conditions, operation weight and in the case of departure operations the amount of thrust percentage influence the vertical profile of the operation. The thrust percentage is applied to the portion of the flight with thrust set at maximum takeoff. After the cutback, if the thrust percentage set is not 100%, a constant percentage of 90% is used.
 
 ### 4D Tracks
 

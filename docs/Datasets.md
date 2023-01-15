@@ -10,11 +10,11 @@ Some of the models implemented in GRAPE require specific input data in order to 
 
 ## Doc29
 
-The [Doc29](https://ecac-ceac.org/documents/ecac-documents-and-international-agreements) provides comprehensive guidance for calculating aircraft noise around airports. The document contains a performance model, which can produce the vertical profile (a sequence of altitudes, true airspeeds and thrust values) along the ground track given a certain input. It also contains a noise model, which describes the propagation of noise from the source to any given location. Both models require a set of input data in order to be applied, the most common being the Aircraft Noise and Performance (ANP) database. In GRAPE, the [performance](#performance) model and the [noise](#noise) model within Doc29 are implemented completely separated. Therefore, the datasets that support these models are also treated separately.
+The [Doc29](https://ecac-ceac.org/documents/ecac-documents-and-international-agreements) provides comprehensive guidance for calculating aircraft noise around airports. The document contains a performance model, which can produce the vertical profile (a sequence of altitudes, true airspeeds and thrust values) along the ground track given a certain input. It also contains a noise model, which describes the propagation of noise from the source to any given location. Both models require a set of input data in order to be applied, the most common being the [Aircraft Noise and Performance (ANP)](https://www.aircraftnoisemodel.org/) database. In GRAPE, the [performance](#performance) model and the [noise](#noise) model within Doc29 are implemented completely separated. Therefore, the datasets that support these models are also treated separately.
 
 ### Performance
 
-The data needed by the performance model described in Doc29 is grouped into Doc29 performance entries in GRAPE, which are uniquely defined by their name. A Doc29 performance entry can have any number of arrival profiles and departure profiles, which are uniquely identified by their name and type (arrival or departure). The vertical profile of a flight operation can be calculated according to two different profile descriptions:
+The data needed by the performance model described in Doc29 is grouped into Doc29 performance entries in GRAPE, which are uniquely identified by their name. A Doc29 performance entry can have any number of arrival profiles and departure profiles, which are uniquely identified by their name and type (arrival or departure). The vertical profile of a flight operation can be calculated according to two different profile descriptions:
 
 - [points](#points)
 - [procedural](#procedural)
@@ -190,3 +190,21 @@ The authors Senzig, Fleming and Iovinelle developed a thrust specific fuel flow 
 - *K<sub>4</sub>*
 
 The *&alpha;* and *&beta;* coefficients are needed to calculate fuel flow for arrival operations and the *K* coefficients for departure operations.
+
+## Fleet
+
+An entry in the GRAPE fleet can be viewed as an abstract concept uniquely identified by the fleet ID. It can represent any given number of physical airplanes being considered in the study. Generally, the level of detail of a study decreases with increasing number of physical airplanes represented by a single ID. The fleet is used to merge the different groupings in the external datasets used by GRAPE into a single ID which can then be attributed to an operation. The following variables can be defined for each fleet ID:
+
+- number of engines
+- maximum sea level static thrust
+- engine breakpoint temperature
+- Doc29 performance ID
+- SFI ID
+- LTO ID
+- Doc29 noise ID
+- Doc29 noise arrival delta
+- Doc29 noise departure delta
+
+The number of engines, the maximum sea level static thrust are used by the Doc29 performance model and the SFI fuel flow model, the engine breakpoint temperature only by the Doc29 performance model. The following four IDs associate the fleet ID with the different datasets used. The noise deltas are used by the Doc29 noise model to apply deviations to the standard data found in the database.
+
+---

@@ -4,11 +4,13 @@ nav:
     - Home: 'index.md'
     - User Guide:
         - Overview: 'UserGuide.md'
-        - GUI & Command Line Tool: 'Gui&CommandLineTool.md'
+        - Application: 'Application.md'
         - Datasets: 'Datasets.md'
         - Input Data: 'InputData.md'
         - Runs & Outputs: 'Runs&Outputs.md'
-    - Schema: 'Schema.md'
+    - Schema:
+        - Schema: 'Schema.md'
+        - Conversion Tables: 'ConversionTables.md'
     - About: 'About.md'
 
 theme:
@@ -18,8 +20,8 @@ theme:
         # Palette toggle for light mode
         - media: "(prefers-color-scheme: light)"
           scheme: default
-          primary: amber
-          accent: green
+          primary: green
+          accent: amber
           toggle:
             icon: material/weather-night
             name: Dark Mode
@@ -27,8 +29,8 @@ theme:
         # Palette toggle for dark mode
         - media: "(prefers-color-scheme: dark)"
           scheme: slate
-          primary: amber
-          accent: green
+          primary: green
+          accent: amber
           toggle:
             icon: material/weather-sunny
             name: Light Mode
@@ -46,7 +48,7 @@ theme:
         - search.share
         - search.suggest
 
-copyright: Copyright &copy; 2022 Goncalo Soares Roque
+copyright: Copyright &copy; 2022 Gon<span>&#231;</span>alo Soares Roque
 docs_dir: docs
 site_dir: site
 

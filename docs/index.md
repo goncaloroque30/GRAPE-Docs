@@ -1,7 +1,7 @@
 <h1 align="center">
     <img src="Icon/GrapeIcon512.png" alt="GRAPE">
     <br />
-    GRAPE - GReen AirPort Environment
+    GRAPE
 </h1>
 
 <p align="center">

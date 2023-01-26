@@ -476,6 +476,6 @@ The options do not need to be passed in any specific order. For the run options,
 
 ```
 GRAPE.exe -h
-GRAPE.exe -x -d -o "Studies/Grape Study.exe" -rp "My Performance Run" -rn "My Noise Run"
-GRAPE.exe -x -o "Studies/Grape Study.exe" -rfe "My Fuel & Emissions Run"
+GRAPE.exe -x -d -o "Studies/Grape Study.grp" -rp "My Performance Run" -rn "My Noise Run"
+GRAPE.exe -x -o "Studies/Grape Study.grp" -rfe "My Fuel & Emissions Run"
 ```

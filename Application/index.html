@@ -757,7 +757,7 @@
 <li>the order of the columns must be respected</li>
 <li>the separating character between two columns must be a comma (<code>,</code>)</li>
 </ul>
-<p>Each of the following sections provides a description of the column order of each <em>.csv</em> known to GRAPE. If the column is mandatory, any row with an empty cell on that colmn will generate an error on import. For variables that have units, GRAPE will interpret the unit as being the one set in the settings (<code>Edit-&gt;Settings</code>).</p>
+<p>Each of the following sections provides a description of the column order of each <em>.csv</em> known to GRAPE. If the column is mandatory, any row with an empty cell on that column will generate an error on import. For variables that have units, GRAPE will interpret the unit as being the one set in the settings (<code>Edit-&gt;Settings</code>).</p>
 <p>The last sections below, with output in their name, describe tables containing output data that can only be exported. While all the input data can be imported and exported via the <code>Edit</code> menu, the output data can only be exported in the Scenarios panel, under the respective run. The columns <em>Mandatory</em> and <em>Constraint</em> do not apply to output tables.</p>
 <h4 id="lto-engines">LTO Engines</h4>
 <table>
@@ -2531,8 +2531,8 @@
 </ul>
 <p>The options do not need to be passed in any specific order. For the run options, only one run of each type is supported. Example usages (in Windows):</p>
 <div class="highlight"><pre><span></span><code>GRAPE.exe -h
-GRAPE.exe -x -d -o &quot;Studies/Grape Study.exe&quot; -rp &quot;My Performance Run&quot; -rn &quot;My Noise Run&quot;
-GRAPE.exe -x -o &quot;Studies/Grape Study.exe&quot; -rfe &quot;My Fuel &amp; Emissions Run&quot;
+GRAPE.exe -x -d -o &quot;Studies/Grape Study.grp&quot; -rp &quot;My Performance Run&quot; -rn &quot;My Noise Run&quot;
+GRAPE.exe -x -o &quot;Studies/Grape Study.grp&quot; -rfe &quot;My Fuel &amp; Emissions Run&quot;
 </code></pre></div>
 
 

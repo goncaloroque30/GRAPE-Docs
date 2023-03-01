@@ -314,6 +314,7 @@ Hint: if Scenario ID is not found in the study, it will be added.
 | Scenario ID            | &#10003;  |                                                                  |          |
 | Performance Run ID     | &#10003;  |                                                                  |          |
 | Noise Run ID           | &#10003;  |                                                                  |          |
+| ID                     | &#10003;  |                                                                  |          |
 | Reference Location     | &#10003;  | `Center`, `Bottom Left`, `Bottom Right`, `Top Left`, `Top Right` |          |
 | Reference Longitude    | &#10003;  | -180 &#8804; x &#8804; 180                                       |          |
 | Reference Latitude     | &#10003;  | -90 &#8804; x &#8804; 90                                         |          |
@@ -331,6 +332,7 @@ Hint: if Scenario ID is not found in the study, it will be added.
 | Scenario ID        | &#10003;  |                            |          |
 | Performance Run ID | &#10003;  |                            |          |
 | Noise Run ID       | &#10003;  |                            |          |
+| ID                 | &#10003;  |                            |          |
 | Longitude          | &#10003;  | -180 &#8804; x &#8804; 180 |          |
 | Latitude           | &#10003;  | -90 &#8804; x &#8804; 90   |          |
 | Altitude MSL       | &#10003;  |                            | Altitude |

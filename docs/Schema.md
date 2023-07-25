@@ -801,7 +801,7 @@ The first step of each departure procedural profile should be a *Takeoff* step. 
 
 | Variable                        | Type    | NOT NULL | Constraint                                              |
 |---------------------------------|---------|:--------:|---------------------------------------------------------|
-| id                              | TEXT    | &#10003; |                                                         |
+| operation_id                    | TEXT    | &#10003; |                                                         |
 | operation                       | TEXT    | &#10003; | `Arrival`, `Departure`                                  |
 | point_number                    | INTEGER | &#10003; | &#8805; 1                                               |
 | flight_phase                    | TEXT    | &#10003; | `Approach`, `Landing Roll`, `Takeoff Roll`, `Departure` |
@@ -825,26 +825,27 @@ The first step of each departure procedural profile should be a *Takeoff* step. 
 ### performance_run
 
 | Variable                                       | Type    | NOT NULL | Constraint                          |
-|------------------------------------------------|---------|:--------:|-------------------------------------|
-| scenario_id                                    | TEXT    | &#10003; |                                     |
-| id                                             | TEXT    | &#10003; |                                     |
-| coordinate_system_type                         | TEXT    | &#10003; | `Geodesic WGS84`, `Local Cartesian` |
-| coordinate_system_longitude_0                  | REAL    |          | -180 &#8804; x &#8804; 180          |
-| coordinate_system_latitude_0                   | REAL    |          | -90 &#8804; x &#8804; 90            |
-| atmosphere_reference_altitude_msl              | REAL    |          | &#8804; 11000                       |
-| atmosphere_reference_temperature               | REAL    |          | &#8805; 0                           |
-| atmosphere_reference_sea_level_pressure        | REAL    |          | &#8805; 0                           |
-| atmosphere_headwind                            | REAL    | &#10003; |                                     |
-| atmosphere_relative_humidity                   | REAL    | &#10003; | 0 &#8804; x &#8804; 1               |
-| performance_model                              | TEXT    | &#10003; | `Doc29`                             |
-| performance_minimum_altitude_msl               | REAL    |          |                                     |
-| performance_maximum_altitude_msl               | REAL    |          |                                     |
-| performance_minimum_cumulative_ground_distance | REAL    |          |                                     |
-| performance_maximum_cumulative_ground_distance | REAL    |          |                                     |
-| performance_minimum_tracks_4d_point_count      | INTEGER |          | &#8805; 0                           |
-| performance_speed_delta_segmentation_threshold | REAL    |          | > 0                                 |
-| performance_ground_distance_filter_threshold   | REAL    |          | &#8805; 0                           |
-| fuel_flow_model                                | TEXT    | &#10003; | `None`, `LTO`, `SFI`                |
+|-----------------------------------------------------|---------|:--------:|-------------------------------------|
+| scenario_id                                         | TEXT    | &#10003; |                                     |
+| id                                                  | TEXT    | &#10003; |                                     |
+| coordinate_system_type                              | TEXT    | &#10003; | `Geodesic WGS84`, `Local Cartesian` |
+| coordinate_system_longitude_0                       | REAL    |          | -180 &#8804; x &#8804; 180          |
+| coordinate_system_latitude_0                        | REAL    |          | -90 &#8804; x &#8804; 90            |
+| atmosphere_reference_altitude_msl                   | REAL    |          | &#8804; 11000                       |
+| atmosphere_temperature_delta                        | REAL    |          | -100 &#8804; x &#8804; 100          |
+| atmosphere_pressure_delta                           | REAL    |          | -15000 &#8804; x &#8804; 15000      |
+| atmosphere_headwind                                 | REAL    | &#10003; |                                     |
+| atmosphere_relative_humidity                        | REAL    | &#10003; | 0 &#8804; x &#8804; 1               |
+| performance_model                                   | TEXT    | &#10003; | `Doc29`                             |
+| performance_minimum_altitude_msl                    | REAL    |          |                                     |
+| performance_maximum_altitude_msl                    | REAL    |          |                                     |
+| performance_minimum_cumulative_ground_distance      | REAL    |          |                                     |
+| performance_maximum_cumulative_ground_distance      | REAL    |          |                                     |
+| performance_minimum_tracks_4d_point_count           | INTEGER |          | &#8805; 0                           |
+| performance_speed_delta_segmentation_threshold      | REAL    |          | > 0                                 |
+| performance_ground_distance_filter_threshold        | REAL    |          | &#8805; 0                           |
+| performance_flights_doc29_low_altitude_segmentation | INTEGER |          | `0`, `1`                            |
+| fuel_flow_model                                     | TEXT    | &#10003; | `None`, `LTO`, `SFI`                |
 
 | Table Constraint | Details                                  |
 |------------------|------------------------------------------|

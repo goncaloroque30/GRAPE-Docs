@@ -12,7 +12,7 @@ A performance run has the job of transforming the operations listed in the scena
 - [atmospheric conditions](#atmospheric-conditions)
 - [flight operations performance model](#performance-models)
 - [spatial filters](#spatial-filters)
-- [thresholds](#thresholds)
+- [segmentation and filters](#segmentation-and-filters)
 
 
 ### Coordinate Reference System
@@ -56,15 +56,17 @@ This mode uses the [SFI fuel flow model](https://arc.aiaa.org/doi/10.2514/1.4202
 
 ### Spatial Filters
 
-A filter on altitude MSL can be defined which will influence the output of both flight operations and tracks 4D. Output points which are noth within the defined minimum and maximum altitudes MSL will be removed from the performance output.
+A filter on altitude MSL can be defined which will influence the output of both flight operations and tracks 4D. Output points which are not within the defined minimum and maximum altitudes MSL will be removed from the performance output.
 
 The cumulative ground distance filter is only applied to flight operations, as the input from tracks 4D has no common point defined in the trajectory.
 
-### Thresholds
+### Segmentation and Filters
 
-The minimum number of points that a track 4D requires in order to generate an output can be defined. If any track 4D for the respective scenario does not have this minimum amount of points, an error will be generated and the performance run canceled.
+The segmentation of the initial climb and of the final approach phase according to Doc29 can be enabled or disabled for flight operations.
 
 The speed delta segmentation threshold can be defined to ensure a minimum speed change between two adjacent output points. If the speed difference between two adjacent points is higher than minimum speed delta, extra points are added between those two adjacent points at an equal speed interval which is at least the speed delta minimum.
+
+The minimum number of points that a track 4D requires in order to generate an output can be defined. If any track 4D for the respective scenario does not have this minimum amount of points, an error will be generated and the performance run canceled.
 
 The ground distance delta filter threshold can be defined to ensure that any two adjacent points in the output are spatially separated from one another by at least a minimum ground distance. If the ground distance between two adjacent points is smaller than the threshold defined, a point will be deleted.
 

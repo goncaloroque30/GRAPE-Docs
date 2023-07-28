@@ -469,12 +469,12 @@ The same executable used to start the GUI can be used from the command line to a
 - [-h] - Display this help. Equivalent to [-h -x].
 - [-o] - Open a GRAPE study located at the path specified by the following argument.
 - [-d] - Delete all outputs from the study. Use only in conjunction with -o.
-- [-rp] - Start the performance run specified by the following argument as `<scenario name>-<performance run name>`. Use only in conjunction with -o.
-- [-rn] - Start the noise run specified by the following argument as `<scenario name>-<performance run name>-<noise run name>`. Use only in conjunction with -o.
-- [-rfe] - Start the fuel and emissions run specified by the following argument as `<scenario name>-<performance run name>-<fuel & emissions run name>`. Use only in conjunctio with -o.
+- [-rp] - Start the performance run specified by the following argument as `<scenario name>-<performance run name>`. Use only in conjunction with -o. Multiple occurences accepted.
+- [-rn] - Start the noise run specified by the following argument as `<scenario name>-<performance run name>-<noise run name>`. Use only in conjunction with -o. Multiple occurences accepted.
+- [-rfe] - Start the fuel and emissions run specified by the following argument as `<scenario name>-<performance run name>-<fuel & emissions run name>`. Use only in conjunctio with -o. Multiple occurences accepted.
 - [-x] - Close after processing the command line options, do not run the application.
 
-The options do not need to be passed in any specific order. For the run options, only one run of each type is supported. Example usages (in Windows):
+The options do not need to be passed in any specific order. Example usages (in Windows):
 
 ```
 GRAPE.exe -h

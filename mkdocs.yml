@@ -1,16 +1,18 @@
 site_name: GRAPE
 
 nav:
-    - Home: 'index.md'
-    - User Guide:
-        - Overview: 'UserGuide.md'
-        - Application: 'Application.md'
-        - Datasets: 'Datasets.md'
-        - Input Data: 'InputData.md'
-        - Runs & Outputs: 'Runs&Outputs.md'
+    - Home: index.md
+    - Application:
+        - Application/index.md
+        - Command Line Tool: Application/CommandLineTool.md
+    - IO:
+        - IO/index.md
+        - Conversion Tables: IO/ConversionTables.md
+        - CSV Files: IO/CSVFiles.md
+        - ANP Folder: IO/ANPFolder.md
+        - Geopackage Files: IO/GeopackageFiles.md
     - Schema:
-        - Schema: 'Schema.md'
-        - Conversion Tables: 'ConversionTables.md'
+        - Schema/index.md
     - About: 'About.md'
 
 theme:
@@ -39,7 +41,6 @@ theme:
         - navigation.expand
         - navigation.indexes
         - navigation.instant
-        - navigation.sections
         - navigation.tabs
         - navigation.top
         - navigation.tracking
@@ -48,11 +49,14 @@ theme:
         - search.share
         - search.suggest
 
-copyright: Copyright &copy; 2022 Gon<span>&#231;</span>alo Soares Roque
+copyright: Copyright &copy; 2023 Gon<span>&#231;</span>alo Soares Roque
 docs_dir: docs
 site_dir: site
 
 markdown_extensions:
+    - admonition
+    - attr_list
+
     # Python Markdown
     - tables
     - toc:
@@ -61,4 +65,8 @@ markdown_extensions:
     
     # Python Markdown Extensions
     - pymdownx.highlight
+    - pymdownx.details
     - pymdownx.superfences
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg

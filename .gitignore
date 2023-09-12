@@ -350,4 +350,10 @@ MigrationBackup/
 .ionide/
 
 ##### GRAPE Docs Scpecific
+# Private files
+**/.*
+!.editorconfig
+!.gitignore
+!.gitsubmodules
+
 site

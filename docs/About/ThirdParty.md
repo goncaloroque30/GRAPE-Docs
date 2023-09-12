@@ -1,5 +1,6 @@
+# Third Party Software
 
-## Third Party Software used by GRAPE
+This is a complete list of the third party software used by GRAPE:
 
 - [Doctest](https://github.com/doctest/doctest)
 - [GeographicLib](https://github.com/geographiclib/geographiclib)

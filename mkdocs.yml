@@ -13,7 +13,21 @@ nav:
         - Geopackage Files: IO/GeopackageFiles.md
     - Schema:
         - Schema/index.md
-    - About: 'About.md'
+        - Airports: Schema/airports.md
+        - Doc29 Noise: Schema/doc29_noise.md
+        - Doc29 Performance: Schema/doc29_performance.md
+        - Fleet: Schema/fleet.md
+        - Emissions Run: Schema/emissions_run.md
+        - LTO Fuel & Emissions: Schema/lto_fuel_emissions.md
+        - Noise Run: Schema/noise_run.md
+        - Operations: Schema/operations.md
+        - Performance Run: Schema/performance_run.md
+        - Scenarios: Schema/scenarios.md
+        - SFI Fuel: Schema/sfi_fuel.md
+    - About: 
+        - About/index.md
+        - FAQ: About/FAQ.md
+        - Third Party: About/ThirdParty.md
 
 theme:
     name: material

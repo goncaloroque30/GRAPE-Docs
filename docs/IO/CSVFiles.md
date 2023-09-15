@@ -2,7 +2,7 @@
 
 ## Overview
 
-Practically all the input data in GRAPE can be imported and exported via *.csv* files. The only exception is the Doc29 data, which can only be imported from ANP folders. The following applies to all *.csv* files:
+All the input data in GRAPE can be imported and exported via *.csv* files. The following applies to all *.csv* files:
 
 - **import**: the order of the columns must be respected.
 - **import**: the delimiter will be detected based on the first 100 rows (`,`, `;` and `tab` supported).
@@ -19,6 +19,153 @@ Each of the following sections provides a description of the column order of eac
 The [outputs](#outputs) section below describes tables containing output, which can only be exported. While all the input data can be imported and exported via the `Edit` menu, the output data can only be exported in the `Scenarios` panel, under the respective run. The columns *Mandatory* and *Constraint* do not apply to output tables.
 
 ## Datasets
+
+### Doc29 Performance
+
+| Variable | Mandatory | Constraint                   | Unit  |
+|----------|:---------:|------------------------------|-------|
+| ID       | &#10003;  |                              |       |
+| Type     | &#10003;  | `Jet`, `Turboprop`, `Piston` |       |
+
+### Doc29 Aerodynamic Coefficients
+
+| Variable             | Mandatory | Constraint                  | Unit                   |
+|----------------------|:---------:|-----------------------------|------------------------|
+| Doc29 Performance ID | &#10003;  |                             |                        |
+| ID                   | &#10003;  |                             |                        |
+| Type                 | &#10003;  | `Takeoff`, `Land`, `Cruise` |                        |
+| R                    | &#10003;  | > 0                         |                        |
+| B                    |           | > 0                         | Doc29 B Coefficient    |
+| C                    |           | > 0                         | Doc29 C/D Coefficients |
+| D                    |           | > 0                         | Doc29 C/D Coefficients |
+
+### Doc29 Thrust Ratings
+
+| Variable             | Mandatory | Constraint | Unit                 |
+|----------------------|:---------:|------------|----------------------|
+| Doc29 Performance ID | &#10003;  |            |                      |
+| Thrust Rating        | &#10003;  | `Maximum Takeoff`, `Maximum Climb`, `Idle`, `Maximum Takeoff High Temperature`, `Maximum Climb High Temperature`, `Idle High Temperature` |      |
+| E                    | &#10003;  |            | Thrust               |
+| F                    | &#10003;  |            | Doc29 F Coefficient  |
+| Ga                   | &#10003;  |            | Doc29 Ga Coefficient |
+| Gb                   | &#10003;  |            | Doc29 Gb Coefficient |
+| H                    | &#10003;  |            | Doc29 H Coefficient  |
+
+### Doc29 Thrust Ratings Propeller
+
+| Variable             | Mandatory | Constraint                         | Unit  |
+|----------------------|:---------:|------------------------------------|-------|
+| Doc29 Performance ID | &#10003;  |                                    |       |
+| Thrust Rating        | &#10003;  | `Maximum Takeoff`, `Maximum Climb` |       |
+| Propeller Efficiency | &#10003;  |  0 < x &#8804; 1                   |       |
+| Propeller Power      | &#10003;  |  > 0                               | Power |
+
+### Doc29 Profiles Points
+
+| Variable                        | Mandatory | Constraint | Unit     |
+|---------------------------------|:---------:|------------|----------|
+| Doc29 Performance ID            | &#10003;  |            |          |
+| Operation                       | &#10003;  |            |          |
+| Profile ID                      | &#10003;  |            |          |
+| Cumulative Ground Distance      | &#10003;  |            | Distance |
+| Altitude ATE                    | &#10003;  |            | Altitude |
+| True Airspeed                   | &#10003;  | &#8805; 0  | Speed    |
+| Corrected Net Thrust per Engine | &#10003;  | > 0        | Thrust   |
+
+### Doc29 Profiles Procedural Arrival
+
+| Variable                                      | Mandatory | Constraint            | Unit     |
+|-----------------------------------------------|:---------:|-----------------------|----------|
+| Doc29 Performance ID                          | &#10003;  |                       |          |
+| Profile ID                                    | &#10003;  |                       |          |
+| Step Type                                     | &#10003;  | `Descend Decelerate`, `Descend Idle`, `Level`, `Level Decelerate`, `Level Idle`, `Descend Land`, `Ground Decelerate` |          |
+| Aerodynamic Coefficient ID                    |           |                       |          |
+| Start Altitude ATE                            |           |                       | Altitude |
+| Descent Angle                                 |           | < 0                   |          |
+| Start Calibrated Airspeed                     |           | &#8805; 0             | Speed    |
+| Ground Distance                               |           | > 0                   | Distance |
+| Descend Land - Descent Angle                  |           | < 0                   |          |
+| Descend Land - Threshold Crossing Altitude    |           |                       | Altitude |
+| Descend Land - Touchdown Roll                 |           | > 0                   | Distance |
+| Ground Decelerate - Ground Distance           |           | &#8805; 0             | Distance |
+| Ground Decelerate - Start Calibrated Airspeed |           | &#8805; 0             | Speed    |
+| Ground Decelerate - Start Thrust Percentage   |           | 0 &#8804; x &#8804; 1 |          |
+
+### Doc29 Profiles Procedural Departure
+
+| Variable                              | Mandatory | Constraint      | Unit     |
+|---------------------------------------|:---------:|-----------------|----------|
+| Doc29 Performance ID                  | &#10003;  |                 |          |
+| Profile ID                            | &#10003;  |                 |          |
+| Step Type                             | &#10003;  | `Takeoff`, `Climb`, `Climb Accelerate`, `Climb Accelerate Percentage` |          |
+| Thrust Cutback                        |           | > 0             |          |
+| Aerodynamic Coefficient ID            | &#10003;  |                 |          |
+| End Altitude ATE                      |           |                 | Altitude |
+| End Calibrated Airspeed               |           | &#8805; 0       | Speed    |
+| Climb Rate                            |           | &#8805; 0       |          |
+| Acceleration Percentage               |           | 0 < x &#8804; 1 |          |
+| Takeoff - Initial Calibrated Airspeed |           | &#8805; 0       | Speed    |
+
+???+ info
+	The thrust cutback variable should be empty, except at the thrust cutback step. GRAPE will interpret any non empty cell as the thrust cutback step.
+
+### Doc29 Noise
+
+| Variable                 | Mandatory | Constraint                      | Unit  |
+|--------------------------|:---------:|---------------------------------|-------|
+| ID                       | &#10003;  |                                 |       |
+| Lateral Directivity      | &#10003;  | `Wing`, `Fuselage`, `Propeller` |       |
+| Start of Roll Correction | &#10003;  | `None`, `Jet`, `Turboprop`      |       |
+
+### Doc29 NPD Data
+
+| Variable             | Mandatory | Constraint             | Unit   |
+|----------------------|:---------:|------------------------|--------|
+| Doc29 Performance ID | &#10003;  |                        |        |
+| Operation            | &#10003;  | `Arrival`, `Departure` |        |
+| Noise Metric         | &#10003;  | `LAMAX`, `SEL`         |        |
+| Thrust               | &#10003;  |                        | Thrust |
+| Level 200 ft         | &#10003;  |                        |        |
+| Level 400 ft         | &#10003;  |                        |        |
+| Level 600 ft         | &#10003;  |                        |        |
+| Level 1000 ft        | &#10003;  |                        |        |
+| Level 2000 ft        | &#10003;  |                        |        |
+| Level 4000 ft        | &#10003;  |                        |        |
+| Level 6300 ft        | &#10003;  |                        |        |
+| Level 10000 ft       | &#10003;  |                        |        |
+| Level 16000 ft       | &#10003;  |                        |        |
+| Level 25000 ft       | &#10003;  |                        |        |
+
+### Doc29 Spectrum
+
+| Variable             | Mandatory | Constraint             | Unit |
+|----------------------|:---------:|------------------------|------|
+| Doc29 Performance ID | &#10003;  |                        |      |
+| Operation            | &#10003;  | `Arrival`, `Departure` |      |
+| Level 50 Hz          | &#10003;  |                        |      |
+| Level 63 Hz          | &#10003;  |                        |      |
+| Level 80 Hz          | &#10003;  |                        |      |
+| Level 100 Hz         | &#10003;  |                        |      |
+| Level 125 Hz         | &#10003;  |                        |      |
+| Level 160 Hz         | &#10003;  |                        |      |
+| Level 200 Hz         | &#10003;  |                        |      |
+| Level 250 Hz         | &#10003;  |                        |      |
+| Level 315 Hz         | &#10003;  |                        |      |
+| Level 400 Hz         | &#10003;  |                        |      |
+| Level 500 Hz         | &#10003;  |                        |      |
+| Level 630 Hz         | &#10003;  |                        |      |
+| Level 800 Hz         | &#10003;  |                        |      |
+| Level 1000 Hz        | &#10003;  |                        |      |
+| Level 1250 Hz        | &#10003;  |                        |      |
+| Level 1600 Hz        | &#10003;  |                        |      |
+| Level 2000 Hz        | &#10003;  |                        |      |
+| Level 2500 Hz        | &#10003;  |                        |      |
+| Level 3150 Hz        | &#10003;  |                        |      |
+| Level 4000 Hz        | &#10003;  |                        |      |
+| Level 5000 Hz        | &#10003;  |                        |      |
+| Level 6300 Hz        | &#10003;  |                        |      |
+| Level 8000 Hz        | &#10003;  |                        |      |
+| Level 10000 Hz       | &#10003;  |                        |      |
 
 ### LTO Engines
 

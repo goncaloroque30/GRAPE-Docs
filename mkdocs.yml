@@ -70,6 +70,7 @@ site_dir: site
 markdown_extensions:
     - admonition
     - attr_list
+    - tables
 
     # Python Markdown
     - tables

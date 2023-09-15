@@ -110,10 +110,10 @@ See [speed units](#speed)
 
 #### C and D Coefficients
 
-| Unit         | Name                                       | Conversion               |
-|--------------|--------------------------------------------|--------------------------|
-| m/s/sqrt(N)  | Meter per Second per Square Root of Newton |                          |
-| kt/sqrt(lbf) | Knot per Square Root of Pound of Force     | `= 0.243919 m/s/sqrt(N)` |
+| Unit       | Name                                       | Conversion               |
+|------------|--------------------------------------------|--------------------------|
+| m/s/sqrtN  | Meter per Second per Square Root of Newton |                          |
+| kt/sqrtlbf | Knot per Square Root of Pound of Force     | `= 0.243919 m/s/sqrt(N)` |
 
 ### Doc29 Performance Thrust Coefficients
 
@@ -127,10 +127,10 @@ See [speed units](#speed)
 
 #### F Coefficient
 
-| Unit    | Name                          | Conversion          |
-|---------|-------------------------------|---------------------|
-| N/(m/s) | Newton per (Meter per Second) |                     |
-| lbf/kt  | Pound of Force per Knot       | `= 8.64665 N/(m/s)` |
+| Unit   | Name                          | Conversion          |
+|--------|-------------------------------|---------------------|
+| N/m/s  | Newton per Meter per Second |                     |
+| lbf/kt | Pound of Force per Knot       | `= 8.64665 N/m/s` |
 
 #### G<sub>A</sub> Coefficient
 
@@ -143,8 +143,8 @@ See [speed units](#speed)
 
 | Unit               | Name                            | Conversion                               |
 |--------------------|---------------------------------|------------------------------------------|
-| N/m<sup>2</sup>    | Newton per Meter<sup>2</sup>    |                                          |
-| lbf/ft<sup>2</sup> | Pound of Force per Square Meter | <code>= 47.880251 N/m<sup>2</sup></code> |
+| N/m2    | Newton per Meter2    |                                          |
+| lbf/ft2 | Pound of Force per Square Meter | <code>= 47.880251 N/m<sup>2</sup></code> |
 
 #### H Coefficient
 

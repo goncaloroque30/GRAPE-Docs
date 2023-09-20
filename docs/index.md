@@ -12,7 +12,7 @@
 
 ## Download
 
-[:simple-windows11: Windows x64](https://github.com/goncaloroque30/GRAPE/releases/latest/GRAPE.zip){ .md-button }
+[:simple-windows11: Windows x64](https://github.com/goncaloroque30/GRAPE/releases/latest/download/GRAPE.zip){ .md-button }
 
 ---
 

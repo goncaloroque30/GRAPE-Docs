@@ -39,9 +39,10 @@ After running a noise run which has cumulative metrics defined, the outputs can 
 
 The geographical representation of all three layers is identical (the receptors at which noise is calculated). Only the attributes change.
 
+<!---
 ## Processing outputs with QGIS
 
-GeoPackage files exported by GRAPE can be displayed and analized in GIS software. As an example, a workflow for displaying and styling outputs is provided in [QGIS](https://qgis.org).
+GeoPackage files exported by GRAPE can be displayed and analysed in GIS software. As an example, a workflow for displaying and styling outputs in [QGIS](https://qgis.org) is provided.
 
 Open QGIS and open (CTRL+O) the example project provided in `GRAPE/res/Examples`. After saving the GeoPackage files (Performance run or Noise run) to your machine, locate the `.gpkg` by using the file explorer. Then simply add the file to your QGIS project by drag-and-drop. You can either add the whole file or open the GeoPackage and select the vector file you want to analyze.    
 
@@ -55,4 +56,5 @@ You have several options for styling. For routes and airports, you can choose be
 
 For presentational purposes it might be required to create noise contours. To accomplish that, it is necessary to interpolate the point data. In the QGIS toolbox, choose the `TIN interpolation` algorithm. Change the vector layer to the layer containing the noise run output and change the interpolation attribute to `exposure_db`. Press the green `+`. For `Extent` you can choose the same layer. `Output raster size` lets you set the resolution for your output. It is recommended to set a resolution of at least 100x100. Run the algorithm. A new layer `Interpolated` is added to the project containing the results.
 
-Upon creation, the layer is temporary. To make it permanent, right click the layer and choose `Export`, then `Save as...`. For format, leave GeoTIFF. Under file name, choose the path where you want to save your interpolation (ideally your project folder). Make sure to set the CRS to your project CRS. Now press `OK`. You can now remove the temporary layer from your project. To restyle the new layer, right click and navigate to `Properties`. In the `Symbology` tab, select the render type `Singleband pseudocolor`. The folder symbol allows to import custom color maps. Click it, and navigate to `GRAPE/res/Examples/QGIS styles` and selct the provided color map. Press apply and close the symbology window to see the results.
+Upon creation, the layer is temporary. To make it permanent, right click the layer and choose `Export`, then `Save as...`. For format, leave GeoTIFF. Under file name, choose the path where you want to save your interpolation (ideally your project folder). Make sure to set the CRS to your project CRS. Now press `OK`. You can now remove the temporary layer from your project. To restyle the new layer, right click and navigate to `Properties`. In the `Symbology` tab, select the render type `Singleband pseudocolor`. The folder symbol allows to import custom color maps. Click it, and navigate to `GRAPE/res/Examples/QGIS styles` and select the provided color map. Press apply and close the symbology window to see the results.
+--->

@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+title: GRAPE-Docs
+abstract: Documentation repository for GRAPE.
+authors:
+  - family-names: Soares Roque
+    given-names: Gonçalo
+version: 1.0
+date-released: "2023-09-20"
+license: GPL-3.0
+repository-code: "https://github.com/goncaloroque30/GRAPE-Docs"
